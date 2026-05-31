@@ -539,7 +539,7 @@ export default function App() {
                 <div className="flex items-center gap-2">
                   <Layers className="w-5 h-5 text-blue-500" />
                   <span className="font-extrabold text-base tracking-tight text-zinc-900 dark:text-white">
-                    Live Bangalore Coordinate Space Map
+                    Live map · Pattanagere / RR Nagar
                   </span>
                 </div>
                 {/* Dynamic Active route label */}
