@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(75, 85, 99, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
+
+/* Glassmorphism Panel styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 244, 245, 0.8);
+}
+.dark .glass-panel {
+  background: rgba(22, 27, 38, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glowing Border for the Recommended station card */
+.recommended-border-glow {
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.15), 0 4px 6px -2px rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+.dark .recommended-border-glow {
+  box-shadow: 0 0 20px 2px rgba(16, 185, 129, 0.15), inset 0 0 12px 1px rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* Radial Glow Backdrops */
+.glow-backdrop-teal {
+  background: radial-gradient(circle 300px at 50% -100px, rgba(16, 185, 129, 0.08), transparent);
+}
+.dark .glow-backdrop-teal {
+  background: radial-gradient(circle 400px at 50% -100px, rgba(16, 185, 129, 0.12), transparent);
+}
+
+/* Animated SVG route dash effect */
+.svg-route-dash {
+  stroke-dasharray: 8;
+  animation: dash-animation 25s linear infinite;
+}
+
+@keyframes dash-animation {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
